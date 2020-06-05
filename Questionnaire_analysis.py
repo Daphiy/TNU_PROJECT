@@ -59,11 +59,11 @@ for sub in subjects:
         continue
     #calculate the parameters for each partecipants
     current_sub_score = current_questions.Answer.sum()
-    if current_sub_score <= 5:
+    if current_sub_score < 5:
         severity = "minimal"
-    elif current_sub_score <= 10:
+    elif current_sub_score < 10:
         severity = "moderated"
-    elif current_sub_score <= 15:
+    elif current_sub_score < 15:
         severity = "moderately severe"
     else:
         severity = "severe depression"
